@@ -1,0 +1,13 @@
+services:
+  app:
+    entrypoint:
+    - sleep
+    - infinity
+    image: docker/dev-environments-default:stable-1
+    init: true
+    volumes:
+    - type: bind
+      source: /var/run/docker.sock
+      target: /var/run/docker.sock
+
+# 7eb85f44c22962f72d3e4188f22f41b8fbec732d3e1b3b85ddc55225bb8e5dee
